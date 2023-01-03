@@ -1,19 +1,18 @@
-#Credit: https://github.com/Area69Lab
 #setup.sh VNC_USER_PASSWORD VNC_PASSWORD NGROK_AUTH_TOKEN
 
 #disable spotlight indexing
 sudo mdutil -i off -a
 
 #Create new account
-sudo dscl . -create /Users/alone
-sudo dscl . -create /Users/alone UserShell /bin/bash
-sudo dscl . -create /Users/alone RealName "Alone"
-sudo dscl . -create /Users/alone UniqueID 1001
-sudo dscl . -create /Users/alone PrimaryGroupID 80
-sudo dscl . -create /Users/alone NFSHomeDirectory /Users/vncuser
-sudo dscl . -passwd /Users/alone $1
-sudo dscl . -passwd /Users/alone $1
-sudo createhomedir -c -u alone > /dev/null
+sudo dscl . -create /Users/ilyas
+sudo dscl . -create /Users/ilyas UserShell /bin/bash
+sudo dscl . -create /Users/ilyas RealName "Ilyas"
+sudo dscl . -create /Users/ilyas UniqueID 1001
+sudo dscl . -create /Users/ilyas PrimaryGroupID 80
+sudo dscl . -create /Users/ilyas NFSHomeDirectory /Users/vncuser
+sudo dscl . -passwd /Users/ilyas $1
+sudo dscl . -passwd /Users/ilyas $1
+sudo createhomedir -c -u ilyas > /dev/null
 
 #Enable VNC
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -allowAccessFor -allUsers -privs -all
@@ -28,6 +27,10 @@ sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resourc
 
 #install ngrok
 brew install --cask ngrok
+brew install --cask teamviewer
+brew install --cask intellij-idea
+brew install --cask android-studio
+brew install --cask visual-studio-code
 
 #configure ngrok and start it
 ngrok authtoken $3
