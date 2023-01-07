@@ -28,17 +28,11 @@ sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resourc
 #install ngrok
 brew install --cask ngrok
 brew install --cask teamviewer
-brew install --cask intellij-idea
-brew install --cask android-studio
 brew install --cask visual-studio-code
-brew install --cask docker
 brew install --cask github
 brew install --cask postman
-brew install kubernetes-cli
-brew tap mongodb/brew
-brew update
-brew install mongodb-community@6.0
+brew install --cask mongodb-compass
 
 #configure ngrok and start it
 ngrok authtoken $3
-ngrok tcp 5900 --region=eu &
+ngrok tcp 5900 --region=us &
