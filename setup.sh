@@ -35,4 +35,4 @@ brew install --cask mongodb-compass
 
 #configure ngrok and start it
 ngrok authtoken $3
-ngrok tcp 5900 --region=us &
+ngrok tcp 5900 --region=eu &
