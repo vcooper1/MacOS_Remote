@@ -32,11 +32,7 @@ brew install --cask visual-studio-code
 brew install --cask github
 brew install --cask postman
 brew install --cask mongodb-compass
-brew install --cask docker
-brew install --cask docker-compose
-brew install --cask kubectl
-brew install --cask kubectx
-brew install --cask colima
+brew install docker docker-compose kubectl kubectx colima
 
 #configure ngrok and start it
 ngrok authtoken $3
